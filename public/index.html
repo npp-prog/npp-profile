@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
   <title>Neil Priolo</title>
   <!-- TODO: replace with a one-sentence summary of your headline -->
   <meta name="description" content="Neil Priolo, professional profile, experience, and contact information.">
@@ -12,62 +13,94 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
   <header class="site-header">
-    <nav class="nav container" aria-label="Main">
-      <a class="brand" href="#top">Neil Priolo</a>
-      <ul class="nav-links">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top" aria-label="Neil Priolo, back to top">NP<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="top">
+  <main id="main">
     <!-- ============ HERO ============ -->
-    <section class="hero container">
-      <!-- To use a photo, add public/photo.jpg and replace the div below with:
-           <img class="avatar" src="/photo.jpg" alt="Neil Priolo"> -->
-      <div class="avatar" aria-hidden="true">NP</div>
-      <div>
-        <h1>Neil Priolo</h1>
+    <section class="hero container" id="top">
+      <div class="hero-text reveal">
+        <!-- TODO: set your availability, or delete this line -->
+        <p class="status"><span class="dot" aria-hidden="true"></span>Open to new opportunities</p>
+        <h1>Hi, I'm <span class="gradient-text">Neil Priolo</span></h1>
         <!-- TODO: your LinkedIn headline -->
         <p class="headline">Your Headline &middot; Role at Company</p>
-        <!-- TODO: your location -->
-        <p class="location">City, State</p>
+        <!-- TODO: one or two sentences on what you do and who you help -->
+        <p class="lede">A short line about what you do, the kind of work you're known for, and the value you bring.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/prioloneil" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="#contact">
+            Get in touch
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/prioloneil" target="_blank" rel="noopener">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
             LinkedIn
           </a>
-          <a class="btn" href="#contact">Get in touch</a>
         </div>
+        <!-- TODO: your location -->
+        <p class="location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          City, State
+        </p>
+      </div>
+      <div class="hero-photo reveal">
+        <!-- To use a photo, add public/photo.jpg and replace the div below with:
+             <img src="/photo.jpg" alt="Neil Priolo" width="320" height="320"> -->
+        <div class="avatar" aria-hidden="true">NP</div>
       </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
     <section id="about" class="section container">
-      <h2>About</h2>
-      <!-- TODO: paste your LinkedIn "About" section -->
-      <p>
-        Write a short summary of who you are, what you do, and what you're looking for.
-        You can paste the "About" section from your LinkedIn profile here.
-      </p>
+      <p class="eyebrow reveal">01 &mdash; About</p>
+      <h2 class="reveal">A bit about me</h2>
+      <div class="about-grid">
+        <div class="card about-text reveal">
+          <!-- TODO: paste your LinkedIn "About" section -->
+          <p>
+            Write a short summary of who you are, what you do, and what you're looking for.
+            You can paste the "About" section from your LinkedIn profile here.
+          </p>
+          <p>Add a second paragraph about your approach, interests, or what you're working on now.</p>
+        </div>
+        <!-- TODO: three highlight numbers, or delete this block -->
+        <ul class="stats">
+          <li class="card stat reveal"><span class="stat-num">10+</span><span class="stat-label">Years of experience</span></li>
+          <li class="card stat reveal"><span class="stat-num">00</span><span class="stat-label">Highlight metric</span></li>
+          <li class="card stat reveal"><span class="stat-num">00</span><span class="stat-label">Another highlight</span></li>
+        </ul>
+      </div>
     </section>
 
     <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="section container">
-      <h2>Experience</h2>
+      <p class="eyebrow reveal">02 &mdash; Experience</p>
+      <h2 class="reveal">Where I've worked</h2>
       <ol class="timeline">
-        <!-- Copy one <li class="item"> block per position, most recent first -->
-        <li class="item">
-          <div class="item-head">
+        <!-- Copy one <li class="card job"> block per position, most recent first -->
+        <li class="card job reveal">
+          <div class="job-head">
             <div>
               <h3>Job Title</h3>
               <p class="org">Company Name</p>
@@ -79,8 +112,8 @@
             <li>Another highlight, ideally with a measurable result.</li>
           </ul>
         </li>
-        <li class="item">
-          <div class="item-head">
+        <li class="card job reveal">
+          <div class="job-head">
             <div>
               <h3>Previous Job Title</h3>
               <p class="org">Previous Company</p>
@@ -96,10 +129,11 @@
 
     <!-- ============ EDUCATION ============ -->
     <section id="education" class="section container">
-      <h2>Education</h2>
+      <p class="eyebrow reveal">03 &mdash; Education</p>
+      <h2 class="reveal">Education</h2>
       <ol class="timeline">
-        <li class="item">
-          <div class="item-head">
+        <li class="card job reveal">
+          <div class="job-head">
             <div>
               <h3>School Name</h3>
               <p class="org">Degree, Field of Study</p>
@@ -112,40 +146,46 @@
 
     <!-- ============ SKILLS ============ -->
     <section id="skills" class="section container">
-      <h2>Skills &amp; Certifications</h2>
+      <p class="eyebrow reveal">04 &mdash; Skills</p>
+      <h2 class="reveal">Skills &amp; certifications</h2>
       <!-- TODO: replace with your skills from LinkedIn -->
-      <ul class="tags">
+      <ul class="tags reveal">
         <li>Skill One</li>
         <li>Skill Two</li>
         <li>Skill Three</li>
         <li>Skill Four</li>
         <li>Skill Five</li>
+        <li>Certification</li>
       </ul>
     </section>
 
     <!-- ============ CONTACT ============ -->
     <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <p>The best way to reach me is through LinkedIn or the form below.</p>
-      <!-- Netlify Forms: submissions appear in the Netlify dashboard under Forms -->
-      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hidden"><label>Leave this empty: <input name="bot-field"></label></p>
-        <label>Name <input type="text" name="name" required autocomplete="name"></label>
-        <label>Email <input type="email" name="email" required autocomplete="email"></label>
-        <label>Message <textarea name="message" rows="5" required></textarea></label>
-        <button class="btn btn-primary" type="submit">Send message</button>
-      </form>
+      <div class="card contact reveal">
+        <div class="contact-intro">
+          <p class="eyebrow">05 &mdash; Contact</p>
+          <h2>Let's work together</h2>
+          <p>Have a question or an opportunity in mind? Send a message, or reach me on LinkedIn.</p>
+          <a class="text-link" href="https://www.linkedin.com/in/prioloneil" target="_blank" rel="noopener">linkedin.com/in/prioloneil &rarr;</a>
+        </div>
+        <!-- Netlify Forms: submissions appear in the Netlify dashboard under Forms -->
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden"><label>Leave this empty: <input name="bot-field"></label></p>
+          <label>Name <input type="text" name="name" required autocomplete="name"></label>
+          <label>Email <input type="email" name="email" required autocomplete="email"></label>
+          <label>Message <textarea name="message" rows="5" required></textarea></label>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year">2026</span> Neil Priolo</p>
-      <a href="https://www.linkedin.com/in/prioloneil" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
+  <footer class="site-footer container">
+    <p>&copy; <span id="year">2026</span> Neil Priolo</p>
+    <a href="https://www.linkedin.com/in/prioloneil" target="_blank" rel="noopener">LinkedIn</a>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/script.js" defer></script>
 </body>
 </html>
