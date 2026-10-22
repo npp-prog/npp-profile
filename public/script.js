@@ -65,3 +65,19 @@ if ('IntersectionObserver' in window) {
   }, { rootMargin: '-45% 0px -50% 0px' });
   sections.forEach((s) => spy.observe(s));
 }
+
+// Project filters
+const filterBtns = document.querySelectorAll('.filter');
+const projectItems = document.querySelectorAll('#projects [data-category]');
+const emptyMsg = document.querySelector('.filter-empty');
+filterBtns.forEach((btn) => btn.addEventListener('click', () => {
+  const f = btn.dataset.filter;
+  filterBtns.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+  let shown = 0;
+  projectItems.forEach((item) => {
+    const match = f === 'all' || item.dataset.category === f;
+    item.hidden = !match;
+    if (match) { shown++; item.classList.add('visible'); }
+  });
+  emptyMsg.hidden = shown > 0;
+}));

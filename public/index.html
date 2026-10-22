@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=3">
+  <link rel="stylesheet" href="/styles.css?v=4">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -31,10 +31,11 @@
     <nav class="nav wrap" aria-label="Main">
       <a class="wordmark" href="#top">Neil Priolo<span class="wordmark-dot" aria-hidden="true"></span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about"><span class="num">01</span>About</a></li>
-        <li><a href="#experience"><span class="num">02</span>Experience</a></li>
-        <li><a href="#skills"><span class="num">03</span>Skills</a></li>
-        <li><a href="#contact"><span class="num">04</span>Contact</a></li>
+        <li><a href="#projects"><span class="num">01</span>Projects</a></li>
+        <li><a href="#about"><span class="num">02</span>About</a></li>
+        <li><a href="#experience"><span class="num">03</span>Experience</a></li>
+        <li><a href="#skills"><span class="num">04</span>Skills</a></li>
+        <li><a href="#contact"><span class="num">05</span>Contact</a></li>
       </ul>
       <div class="nav-actions">
         <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
@@ -61,9 +62,9 @@
         <!-- TODO: one or two sentences on what you do and who you help -->
         <p class="hero-lede reveal">A short line about what you do, the kind of work you're known for, and the value you bring to the people and teams you work with.</p>
         <div class="hero-cta reveal">
-          <a class="btn" href="#contact">
-            Get in touch
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <a class="btn" href="#projects">
+            See my projects
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
           </a>
           <a class="btn btn-outline" href="https://www.linkedin.com/in/prioloneil" target="_blank" rel="noopener">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
@@ -82,8 +83,8 @@
         <dl class="facts">
           <div><dt>Based in</dt><dd>City, State</dd></div>
           <div><dt>Focus</dt><dd>Your specialty</dd></div>
+          <div><dt>Projects delivered</dt><dd>00+</dd></div>
           <div><dt>Experience</dt><dd>10+ years</dd></div>
-          <div><dt>Currently</dt><dd>Role at Company</dd></div>
         </dl>
       </aside>
     </section>
@@ -96,10 +97,117 @@
       </div>
     </div>
 
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="projects wrap">
+      <div class="projects-head">
+        <div>
+          <p class="label-num">01 &mdash; Selected work</p>
+          <h2 class="reveal">Projects <em>&amp; results</em></h2>
+        </div>
+        <!-- TODO: a sentence about the kind of projects you take on -->
+        <p class="projects-intro reveal">A selection of projects I've led or delivered: the problem, what I did, and what changed because of it.</p>
+      </div>
+
+      <!-- Filters match each project's data-category. TODO: rename the categories -->
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="cat-a" aria-pressed="false">Category One</button>
+        <button type="button" class="filter" data-filter="cat-b" aria-pressed="false">Category Two</button>
+        <button type="button" class="filter" data-filter="cat-c" aria-pressed="false">Category Three</button>
+      </div>
+
+      <!-- Featured project. TODO: your best project -->
+      <article class="featured reveal" data-category="cat-a">
+        <!-- To use an image: <img class="featured-media" src="/projects/featured.jpg" alt="Short description of the image"> -->
+        <div class="featured-media thumb-forest" aria-hidden="true"><span>01</span></div>
+        <div class="featured-body">
+          <div class="project-meta"><span>Featured &middot; Category One</span><span>YYYY</span></div>
+          <h3>Featured Project Title</h3>
+          <p class="featured-summary">Two or three sentences on the challenge, your approach, and the outcome. This is your strongest project, so lead with the result.</p>
+          <dl class="featured-facts">
+            <div><dt>Role</dt><dd>Your role</dd></div>
+            <div><dt>Client / team</dt><dd>Organization</dd></div>
+            <div><dt>Timeline</dt><dd>0 months</dd></div>
+          </dl>
+          <ul class="results">
+            <li><span class="result-num">00%</span><span>Key result</span></li>
+            <li><span class="result-num">$00k</span><span>Another result</span></li>
+            <li><span class="result-num">0x</span><span>Third result</span></li>
+          </ul>
+          <ul class="project-tags"><li>Tool</li><li>Skill</li><li>Method</li></ul>
+        </div>
+      </article>
+
+      <!-- Copy one <li class="project"> block per project -->
+      <ul class="project-grid">
+          <li class="project reveal" data-category="cat-a">
+            <a class="project-link" href="#contact" aria-label="Project Title: ask me about this project">
+              <!-- To use an image: <img class="thumb" src="/projects/project-02.jpg" alt="" loading="lazy"> -->
+              <div class="thumb thumb-ink" aria-hidden="true"><span>02</span></div>
+              <div class="project-meta"><span>Category One</span><span>YYYY</span></div>
+              <h3>Project Title <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
+              <p>One or two sentences on the problem, what you did, and the result.</p>
+              <ul class="project-tags"><li>Tool</li><li>Skill</li></ul>
+            </a>
+          </li>
+          <li class="project reveal" data-category="cat-b">
+            <a class="project-link" href="#contact" aria-label="Project Title: ask me about this project">
+              <!-- To use an image: <img class="thumb" src="/projects/project-03.jpg" alt="" loading="lazy"> -->
+              <div class="thumb thumb-brass" aria-hidden="true"><span>03</span></div>
+              <div class="project-meta"><span>Category Two</span><span>YYYY</span></div>
+              <h3>Project Title <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
+              <p>One or two sentences on the problem, what you did, and the result.</p>
+              <ul class="project-tags"><li>Tool</li><li>Skill</li></ul>
+            </a>
+          </li>
+          <li class="project reveal" data-category="cat-c">
+            <a class="project-link" href="#contact" aria-label="Project Title: ask me about this project">
+              <!-- To use an image: <img class="thumb" src="/projects/project-04.jpg" alt="" loading="lazy"> -->
+              <div class="thumb thumb-forest" aria-hidden="true"><span>04</span></div>
+              <div class="project-meta"><span>Category Three</span><span>YYYY</span></div>
+              <h3>Project Title <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
+              <p>One or two sentences on the problem, what you did, and the result.</p>
+              <ul class="project-tags"><li>Tool</li><li>Skill</li></ul>
+            </a>
+          </li>
+          <li class="project reveal" data-category="cat-a">
+            <a class="project-link" href="#contact" aria-label="Project Title: ask me about this project">
+              <!-- To use an image: <img class="thumb" src="/projects/project-05.jpg" alt="" loading="lazy"> -->
+              <div class="thumb thumb-brass" aria-hidden="true"><span>05</span></div>
+              <div class="project-meta"><span>Category One</span><span>YYYY</span></div>
+              <h3>Project Title <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
+              <p>One or two sentences on the problem, what you did, and the result.</p>
+              <ul class="project-tags"><li>Tool</li><li>Skill</li></ul>
+            </a>
+          </li>
+          <li class="project reveal" data-category="cat-b">
+            <a class="project-link" href="#contact" aria-label="Project Title: ask me about this project">
+              <!-- To use an image: <img class="thumb" src="/projects/project-06.jpg" alt="" loading="lazy"> -->
+              <div class="thumb thumb-forest" aria-hidden="true"><span>06</span></div>
+              <div class="project-meta"><span>Category Two</span><span>YYYY</span></div>
+              <h3>Project Title <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
+              <p>One or two sentences on the problem, what you did, and the result.</p>
+              <ul class="project-tags"><li>Tool</li><li>Skill</li></ul>
+            </a>
+          </li>
+          <li class="project reveal" data-category="cat-c">
+            <a class="project-link" href="#contact" aria-label="Project Title: ask me about this project">
+              <!-- To use an image: <img class="thumb" src="/projects/project-07.jpg" alt="" loading="lazy"> -->
+              <div class="thumb thumb-ink" aria-hidden="true"><span>07</span></div>
+              <div class="project-meta"><span>Category Three</span><span>YYYY</span></div>
+              <h3>Project Title <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></h3>
+              <p>One or two sentences on the problem, what you did, and the result.</p>
+              <ul class="project-tags"><li>Tool</li><li>Skill</li></ul>
+            </a>
+          </li>
+      </ul>
+      <p class="filter-empty" hidden>No projects in this category yet.</p>
+    </section>
+
     <!-- ============ ABOUT ============ -->
     <section id="about" class="chapter wrap">
       <div class="chapter-label">
-        <span class="label-num">01</span>
+        <span class="label-num">02</span>
         <h2>About</h2>
       </div>
       <div class="chapter-body">
@@ -122,7 +230,7 @@
     <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="chapter wrap">
       <div class="chapter-label">
-        <span class="label-num">02</span>
+        <span class="label-num">03</span>
         <h2>Experience</h2>
       </div>
       <div class="chapter-body">
@@ -168,7 +276,7 @@
     <!-- ============ SKILLS ============ -->
     <section id="skills" class="chapter wrap">
       <div class="chapter-label">
-        <span class="label-num">03</span>
+        <span class="label-num">04</span>
         <h2>Skills</h2>
       </div>
       <div class="chapter-body">
@@ -201,7 +309,7 @@
     <!-- ============ CONTACT ============ -->
     <section id="contact" class="chapter wrap">
       <div class="chapter-label">
-        <span class="label-num">04</span>
+        <span class="label-num">05</span>
         <h2>Contact</h2>
       </div>
       <div class="chapter-body contact">
@@ -241,6 +349,6 @@
     <p class="footer-name" aria-hidden="true">Neil <em>Priolo</em></p>
   </footer>
 
-  <script src="/script.js?v=3" defer></script>
+  <script src="/script.js?v=4" defer></script>
 </body>
 </html>
