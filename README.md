@@ -24,3 +24,8 @@ python3 -m http.server -d public 8000
 ```
 
 Then open http://localhost:8000.
+
+## Claude Code setup
+
+- `.claude/skills/ui-ux-pro-max/` is a design skill (from [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), MIT).
+- `.mcp.json` connects the [21st.dev](https://21st.dev) MCP server. It reads the API key from the `TWENTYFIRST_API_KEY` environment variable, so the key is never committed. Set that variable in your Claude Code environment, and allow the `21st.dev` domain if your network access is limited.
