@@ -12,6 +12,20 @@ toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expande
 links.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
+// Light / dark theme
+const themeBtn = document.querySelector('.theme-toggle');
+const syncThemeLabel = () => {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  themeBtn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+};
+syncThemeLabel();
+themeBtn.addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  try { localStorage.setItem('theme', next); } catch (e) {}
+  syncThemeLabel();
+});
+
 // Header background once scrolled
 const header = document.querySelector('.site-header');
 const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 12);
