@@ -32,6 +32,7 @@ const header = document.querySelector('.site-header');
 const progress = document.querySelector('.progress');
 const onScroll = () => {
   header.classList.toggle('scrolled', window.scrollY > 12);
+  if (!progress) return;
   const max = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.setProperty('--progress', max > 0 ? Math.min(window.scrollY / max, 1) : 0);
 };
