@@ -7,6 +7,7 @@ const setMenu = (open) => {
   toggle.setAttribute('aria-expanded', String(open));
   toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   links.classList.toggle('open', open);
+  document.querySelector('.site-header').classList.toggle('menu-open', open);
 };
 toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
 links.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
@@ -28,7 +29,12 @@ themeBtn.addEventListener('click', () => {
 
 // Header background once scrolled
 const header = document.querySelector('.site-header');
-const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 12);
+const progress = document.querySelector('.progress');
+const onScroll = () => {
+  header.classList.toggle('scrolled', window.scrollY > 12);
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.setProperty('--progress', max > 0 ? Math.min(window.scrollY / max, 1) : 0);
+};
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
