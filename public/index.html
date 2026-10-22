@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neil Priolo</title>
+  <!-- TODO: replace with a one-sentence summary of your headline -->
+  <meta name="description" content="Neil Priolo, professional profile, experience, and contact information.">
+  <meta property="og:title" content="Neil Priolo">
+  <meta property="og:description" content="Professional profile, experience, and contact information.">
+  <meta property="og:type" content="profile">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="#top">Neil Priolo</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero container">
+      <!-- To use a photo, add public/photo.jpg and replace the div below with:
+           <img class="avatar" src="/photo.jpg" alt="Neil Priolo"> -->
+      <div class="avatar" aria-hidden="true">NP</div>
+      <div>
+        <h1>Neil Priolo</h1>
+        <!-- TODO: your LinkedIn headline -->
+        <p class="headline">Your Headline &middot; Role at Company</p>
+        <!-- TODO: your location -->
+        <p class="location">City, State</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/prioloneil" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <!-- TODO: paste your LinkedIn "About" section -->
+      <p>
+        Write a short summary of who you are, what you do, and what you're looking for.
+        You can paste the "About" section from your LinkedIn profile here.
+      </p>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <!-- Copy one <li class="item"> block per position, most recent first -->
+        <li class="item">
+          <div class="item-head">
+            <div>
+              <h3>Job Title</h3>
+              <p class="org">Company Name</p>
+            </div>
+            <p class="dates">Mon YYYY &ndash; Present</p>
+          </div>
+          <ul class="bullets">
+            <li>Key responsibility or accomplishment.</li>
+            <li>Another highlight, ideally with a measurable result.</li>
+          </ul>
+        </li>
+        <li class="item">
+          <div class="item-head">
+            <div>
+              <h3>Previous Job Title</h3>
+              <p class="org">Previous Company</p>
+            </div>
+            <p class="dates">Mon YYYY &ndash; Mon YYYY</p>
+          </div>
+          <ul class="bullets">
+            <li>Key responsibility or accomplishment.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="section container">
+      <h2>Education</h2>
+      <ol class="timeline">
+        <li class="item">
+          <div class="item-head">
+            <div>
+              <h3>School Name</h3>
+              <p class="org">Degree, Field of Study</p>
+            </div>
+            <p class="dates">YYYY &ndash; YYYY</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section container">
+      <h2>Skills &amp; Certifications</h2>
+      <!-- TODO: replace with your skills from LinkedIn -->
+      <ul class="tags">
+        <li>Skill One</li>
+        <li>Skill Two</li>
+        <li>Skill Three</li>
+        <li>Skill Four</li>
+        <li>Skill Five</li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>The best way to reach me is through LinkedIn or the form below.</p>
+      <!-- Netlify Forms: submissions appear in the Netlify dashboard under Forms -->
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden"><label>Leave this empty: <input name="bot-field"></label></p>
+        <label>Name <input type="text" name="name" required autocomplete="name"></label>
+        <label>Email <input type="email" name="email" required autocomplete="email"></label>
+        <label>Message <textarea name="message" rows="5" required></textarea></label>
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Neil Priolo</p>
+      <a href="https://www.linkedin.com/in/prioloneil" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
